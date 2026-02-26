@@ -12,7 +12,7 @@ dependencyResolutionManagement {
         mavenCentral()
         maven("https://maven.fabricmc.net/")
         maven("https://maven.meteordev.org/releases")
-        maven("https://maven.meteordev.org/snapshots")  // 确保包含 snapshots 仓库
+        maven("https://maven.meteordev.org/snapshots")
     }
 }
 

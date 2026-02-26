@@ -1,7 +1,7 @@
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 plugins {
-    id("fabric-loom") version "1.10.5"  // 升级到 1.10.5
+    id("fabric-loom") version "1.14.7"
     id("org.jetbrains.kotlin.jvm") version "2.0.21"
     `java-library`
     `maven-publish`
@@ -21,10 +21,7 @@ dependencies {
     minecraft("com.mojang:minecraft:1.21.8")
     mappings("net.fabricmc:yarn:1.21.8+build.1:v2")
     modImplementation("net.fabricmc:fabric-loader:0.16.9")
-    
-    // Meteor Client 1.21.8 SNAPSHOT 版本
     modImplementation("meteordevelopment:meteor-client:1.21.8-SNAPSHOT")
-    
     implementation(kotlin("stdlib"))
 }
 

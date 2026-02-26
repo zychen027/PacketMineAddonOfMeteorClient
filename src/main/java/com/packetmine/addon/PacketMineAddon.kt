@@ -1,26 +1,20 @@
 package com.packetmine.addon
 
 import meteordevelopment.meteorclient.addons.MeteorAddon
+import meteordevelopment.meteorclient.systems.modules.Category
 import meteordevelopment.meteorclient.systems.modules.Modules
 
-/**
- * PacketMine Meteor Client 插件入口
- * 移植自 LiquidBounce (https://github.com/CCBlueX/LiquidBounce)
- * 
- * Copyright (c) 2015 - 2025 CCBlueX
- * Licensed under GPL-3.0
- */
 class PacketMineAddon : MeteorAddon() {
-    
-    override fun onRegister() {
-        // 注册模块
+
+    companion object {
+        // 正确创建 Category 实例
+        val PACKETMINE_CATEGORY: Category = Category("PacketMine")
+    }
+
+    override fun onInitialize() {
         Modules.get().add(PacketMineModule())
     }
-    
-    override fun onInitialize() {
-        // 初始化配置
-    }
-    
+
     override fun getPackage(): String {
         return "com.packetmine.addon"
     }

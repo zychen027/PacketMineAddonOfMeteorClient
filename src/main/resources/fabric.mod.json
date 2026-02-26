@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "id": "meteor-packetmine",
+  "version": "${version}",
+  "name": "PacketMine Addon",
+  "description": "PacketMine module ported from LiquidBounce for Meteor Client",
+  "authors": [
+    "Original: CCBlueX (LiquidBounce)",
+    "Port: Your Name"
+  ],
+  "contact": {
+    "homepage": "https://github.com/your-repo/meteor-packetmine",
+    "sources": "https://github.com/your-repo/meteor-packetmine"
+  },
+  "license": "GPL-3.0",
+  "environment": "client",
+  "entrypoints": {
+    "meteor": [
+      "com.packetmine.addon.PacketMineAddon"
+    ]
+  },
+  "depends": {
+    "fabricloader": ">=0.16.0",
+    "minecraft": "1.21.8",
+    "meteor-client": ">=0.5.9"
+  },
+  "custom": {
+    "meteor-client:addon": true
+  }
+}

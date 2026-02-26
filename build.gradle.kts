@@ -1,19 +1,14 @@
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 plugins {
-    id("fabric-loom")
-    id("org.jetbrains.kotlin.jvm")
+    id("fabric-loom") version "1.10.5"  // 升级到 1.10.5
+    id("org.jetbrains.kotlin.jvm") version "2.0.21"
     `java-library`
     `maven-publish`
 }
 
 group = "com.packetmine"
 version = "1.0.0"
-
-val minecraftVersion: String by project
-val yarnMappings: String by project
-val loaderVersion: String by project
-val meteorVersion: String by project
 
 repositories {
     mavenCentral()
@@ -23,17 +18,13 @@ repositories {
 }
 
 dependencies {
-    // Minecraft
-    minecraft("com.mojang:minecraft:$minecraftVersion")
-    mappings("net.fabricmc:yarn:$yarnMappings:v2")
+    minecraft("com.mojang:minecraft:1.21.8")
+    mappings("net.fabricmc:yarn:1.21.8+build.1:v2")
+    modImplementation("net.fabricmc:fabric-loader:0.16.9")
     
-    // Fabric Loader
-    modImplementation("net.fabricmc:fabric-loader:$loaderVersion")
+    // Meteor Client 1.21.8 SNAPSHOT 版本
+    modImplementation("meteordevelopment:meteor-client:1.21.8-SNAPSHOT")
     
-    // Meteor Client
-    modImplementation("meteordevelopment:meteor-client:$meteorVersion")
-    
-    // Kotlin 标准库
     implementation(kotlin("stdlib"))
 }
 

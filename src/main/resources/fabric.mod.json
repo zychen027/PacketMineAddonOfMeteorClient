@@ -22,7 +22,7 @@
   "depends": {
     "fabricloader": ">=0.16.0",
     "minecraft": "1.21.8",
-    "meteor-client": "1.21.8-SNAPSHOT"
+    "meteor-client": "*"
   },
   "custom": {
     "meteor-client:addon": true
